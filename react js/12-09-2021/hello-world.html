@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="./lib/react.js"></script>
+    <script src="./lib/react-dom.js"></script>
+    <script src="./lib/babel.js"></script>
+    <style>
+        h1 {
+            color: red;
+        }
+
+
+        .main-heading {
+            color: blue;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="root"></div>
+    <!-- <div>My Others Website sections</div> -->
+
+    <!-- <script>
+        const root = document.getElementById("root");
+
+        function Heading() {
+            return React.createElement(
+                "h1", 
+                {className: 'main-heading'},
+                "Hello World"
+                )
+        }
+
+        ReactDOM.render(React.createElement(Heading, null), root)
+    </script> -->
+
+    <script>
+
+        function sum(num1, num2) {
+            return num1 + num2;
+        }
+
+        const num1 = 2;
+        const num2 = 4;
+        sum(num1, num2)
+        sum(4, 5)
+
+
+    </script>
+    <script type="text/babel">
+        // props
+        // const name = 'Ali';
+        // const text = `My name is ${name}`// template string
+        const root2 = document.getElementById("root-jsx");
+        function Image(props) {
+            return <img src={props.src}/>
+        }
+        function GreetUser(user) {
+            return <h1 id="main-heading" className="main-heading">Hello {user.username}!</h1> // // template string
+        }
+        
+        function Heading2() {
+            return <div> 
+                <GreetUser useremail="ali@gmail.com" username="Ali" ></GreetUser>
+                <GreetUser useremail="azlan@gmail.com" username="Azlan" ></GreetUser>
+                <h1>My First React Website With Jsx</h1>
+            </div>
+        }
+
+        function Description() {
+            return <p>This is my React website</p>
+        }
+        
+        function App() {
+            return <div>
+                <Image src="./images/download.png"></Image>
+                <Heading2></Heading2>
+                <Description></Description>
+            </div>
+        }
+
+
+        ReactDOM.render(<App></App>, root2)
+
+    </script>
+
+<div id="root-jsx"></div>
+    
+</body>
+
+</html>

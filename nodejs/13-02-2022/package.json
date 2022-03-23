@@ -1,0 +1,16 @@
+{
+  "name": "node-class-1",
+  "version": "1.0.0",
+  "description": "This is Nodejs first class example code",
+  "main": "index.js",
+  "scripts": {
+    "server": "node index.js"
+  },
+  "keywords": [],
+  "author": "Muhammad Arsalan",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "express": "^4.17.2"
+  }
+}

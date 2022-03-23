@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // template litreral
+        const num1 = 20;
+        const num2 = 2;
+        function  sum(n1, n2) {
+            return n1+ n2
+        }
+        // const answer = num1 + " + " + num2 + " is " + (num1 + num2);
+        const answer = `${num1} + ${num2} is ${sum(num1, num2)}`
+
+        console.log(answer)
+        // class User {
+        //     constructor(firstName, lastName, email) {
+        //         this.firstName = firstName;
+        //         this.lastName = lastName;
+        //         this.email = email;
+        //     }
+
+        //     getUserData() {
+        //         return this.firstName + ' ' + this.lastName + ' is user';
+        //     }
+        // }
+
+        // class Employee extends User {
+        //     constructor(firstName, lastName, email) {
+        //         super(firstName, lastName, email);
+        //         this.isEmployee = true;
+        //     }
+        // }
+        // class Boss extends User {
+        //     getUserData() {
+        //         return this.firstName + ' ' + this.lastName + ' is admin';
+        //     }
+        // }
+
+        // function User(firstName, lastName, email) {
+        //     this.firstName = firstName;
+        //     this.lastName = lastName;
+        //     this.email = email;
+        //     // this.getFullName = function() {
+        //     //     return this.firstName + this.lastName
+        //     // }
+        // }
+
+        // User.prototype.getFullName = function() {
+        //     return this.firstName + this.lastName
+        // }
+
+        // const user1 = new User('user', '1', 'user1@gmail.com')
+        // const employee1 = new Employee('employee', '1', 'employee1@gmail.com')
+        // const boss = new Boss('boss', '1', 'boss@gmail.com')
+        // console.log(employee1.getUserData())
+        // console.log(user1.getUserData())
+        // console.log(boss.getUserData())
+
+        // function User(firstName, lastName, email) {
+        //     this.firstName = firstName;
+        //     this.lastName = lastName;
+        //     this.email = email;
+        // }
+
+        class User {
+            constructor(firstName, lastName, email) {
+                this.firstName = firstName;
+                this.lastName = lastName;
+                this.email = email;
+            }
+        }
+
+        class Admin extends User {
+            constructor(firstName, lastName, email, address) {
+                super(firstName, lastName, email)
+                this.address = address;
+                this.isAdmin = true;
+            }
+        }
+
+        class SuperAdmin extends Admin {}
+        const user = new User('user', 1, 'user1@gmail.com');
+        const admin = new Admin('admin', 1, 'admin1@gmail.com', 'karachi');
+        const superAdmin = new SuperAdmin('superAdmin', 1, 'admin1@gmail.com', 'lahore');
+        console.log(user);
+        console.log(admin);
+        console.log(superAdmin)
+    </script>
+</body>
+</html>
