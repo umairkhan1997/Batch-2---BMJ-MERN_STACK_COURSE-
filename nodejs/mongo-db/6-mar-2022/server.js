@@ -194,11 +194,13 @@ app.post('/login', async (req, res) => {
             error: 'User Not Found!'
         })
     } else {
-
+        // JSON
+        // BSON
         const result = await comparePassword(body.password, user.password);
         if(result) {
             return res.send({
                 message: "success",
+                test: "Dummy Test",
                 data: user,
                 error: null
             })

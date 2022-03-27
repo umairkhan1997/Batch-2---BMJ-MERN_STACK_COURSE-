@@ -35,6 +35,13 @@ UserSchema.pre('save', async function(next) {
 
 })
 
+UserSchema.set('toJSON', {
+    transform: function(doc, ret, options) {
+        delete ret.password;
+        return ret;
+    }
+})
+
 
 const UserModel = mongoose.model('User', UserSchema);
 
